@@ -1,46 +1,45 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# database
-/prisma/db.sqlite
-/prisma/db.sqlite-journal
-db.sqlite
-
-# next.js
-/.next/
-/out/
-next-env.d.ts
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
+# 💻 Node.js dependencies
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# local env files
-# do not commit any .env files to git, except for the .env.example file. https://create.t3.gg/en/usage/env-variables#using-environment-variables
+# ⚙️ Next.js build files
+.next/
+out/
+
+# 🚀 Prisma (database migrations & local database)
+prisma/migrations/
+prisma/dev.db
+prisma/dev.db-journal
+
+# 🗄️ Supabase (jika menggunakan CLI untuk lokal development)
+supabase/.temp/
+supabase/docker/
+
+# 🔑 Environment variables (jangan sampai bocor!)
 .env
-.env*.local
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
 
-# vercel
-.vercel
+# 📝 Logs & Debugging
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+vercel.log
 
-# typescript
-*.tsbuildinfo
+# 🖍️ Editor-specific files
+.vscode/
+.idea/
+.DS_Store
+*.swp
 
-# idea files
-.idea
+# ⛔ Ignore package-lock.json jika pakai Yarn atau PNPM
+# package-lock.json
+# yarn.lock
